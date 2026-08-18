@@ -134,22 +134,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (animated) return;
     
     metricItems.forEach(item => {
-      const text = item.innerText;
-      const numericValue = parseFloat(text.replace(/[^0-9.]/g, ''));
-      const suffix = text.replace(/[0-9.]/g, '');
+      const originalText = item.innerText.trim();
       
-      if (!isNaN(numericValue)) {
+      // If it's a fixed format like "24/7", keep it unchanged
+      if (originalText.includes('/')) {
+        item.innerText = originalText;
+        return;
+      }
+      
+      // Match numeric part and suffix (like "%" or "+")
+      const match = originalText.match(/^([0-9,.]+)(.*)$/);
+      if (!match) return;
+      
+      const rawNumStr = match[1].replace(/,/g, '');
+      const targetVal = parseFloat(rawNumStr);
+      const suffix = match[2] || '';
+      const isDecimal = rawNumStr.includes('.');
+      
+      if (!isNaN(targetVal)) {
         let current = 0;
-        const step = numericValue / 40;
-        const interval = setInterval(() => {
-          current += step;
-          if (current >= numericValue) {
-            item.innerText = (Number.isInteger(numericValue) ? numericValue : numericValue.toFixed(1)) + suffix;
-            clearInterval(interval);
+        const duration = 1200; // ms
+        const steps = 40;
+        const increment = targetVal / steps;
+        const stepTime = duration / steps;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= targetVal) {
+            if (isDecimal) {
+              item.innerText = targetVal.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + suffix;
+            } else {
+              item.innerText = Math.round(targetVal).toLocaleString() + suffix;
+            }
+            clearInterval(timer);
           } else {
-            item.innerText = (Number.isInteger(numericValue) ? Math.floor(current) : current.toFixed(1)) + suffix;
+            if (isDecimal) {
+              item.innerText = current.toFixed(1) + suffix;
+            } else {
+              item.innerText = Math.floor(current).toLocaleString() + suffix;
+            }
           }
-        }, 25);
+        }, stepTime);
       }
     });
     animated = true;
