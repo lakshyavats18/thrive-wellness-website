@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Thrive Wellness</title>
-  <meta name="description" content="Privacy Policy for Thrive Wellness mobile application and web platform. Detailed breakdown of data practices, GPS location handling, and user privacy rights.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2310b981'/><text y='70' x='50' font-size='60' text-anchor='middle' fill='%23080c14' font-family='sans-serif' font-weight='bold'>T</text></svg>">
+  <meta name="description" content="Privacy Policy for Thrive Wellness holistic health and AI coaching platform. Detailed breakdown of data protection, biometric security, and user privacy rights.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,13 +16,15 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-icon">🌿</div>
+        <img src="logo.png" alt="Thrive Logo" class="logo-img">
         <span>Thrive</span>
       </a>
 
       <ul class="nav-links">
+        <li><a href="index.html#pillars">8 Pillars</a></li>
+        <li><a href="index.html#coach">Haven AI</a></li>
         <li><a href="index.html#features">Features</a></li>
-        <li><a href="index.html#showcase">Experience</a></li>
+        <li><a href="index.html#pricing">Plans</a></li>
         <li><a href="support.html">Support</a></li>
         <li><a href="privacy.html" class="active">Privacy</a></li>
       </ul>
@@ -47,50 +50,49 @@
 
         <div class="legal-section">
           <h2>1. Introduction</h2>
-          <p>Thrive ("we", "our", or "us") is dedicated to protecting your personal privacy and safeguarding your health and fitness data. This Privacy Policy outlines our standards and practices regarding the collection, use, processing, and protection of information gathered through the Thrive mobile application (iOS and Android) and associated web services.</p>
+          <p>Thrive ("we", "our", or "us") is dedicated to protecting your personal privacy and safeguarding your health and wellness data. This Privacy Policy outlines our standards and practices regarding the collection, processing, and protection of information gathered through the Thrive mobile application (iOS and Android) and associated web services.</p>
         </div>
 
         <div class="legal-section">
-          <h2>2. Critical Notice: Background GPS Location Data</h2>
+          <h2>2. Health & Biometric Data Principles</h2>
           <div class="legal-box">
-            <p><strong>GPS & Background Location Tracking Disclosure:</strong><br>
-            Thrive collects precise real-time geolocation coordinates (latitude, longitude, speed, and altitude) when you explicitly initiate an outdoor activity (such as running, jogging, cycling, or walking). This location data is collected in the <strong>foreground and the background (when the app is minimized or your device screen is turned off)</strong> to ensure that your workout route, pace, distance, and elevation changes are recorded accurately without interruptions.</p>
+            <p><strong>Your Health Data Belongs to You:</strong><br>
+            Thrive collects health and wellness metrics across 8 pillars (Sleep, Stress/HRV, Movement, Hydration, Nutrition, Mind & Energy, Mental Health, and Cycle Phases) solely to compute your personal Daily Wellness Score and deliver Haven AI coaching protocols. <strong>We never sell, monetize, or disclose your private biometric telemetry to third-party data brokers or advertisers under any circumstance.</strong></p>
           </div>
-          <p>Location tracking automatically pauses or terminates when you finish or save your active workout session. You maintain full control over whether your activity route is publicly visible to community peers or maintained strictly private in your personal workout archive.</p>
         </div>
 
         <div class="legal-section">
           <h2>3. Information We Collect</h2>
           <h3>A. Account & Profile Information</h3>
           <ul>
-            <li>Name, email address, profile avatar, and biographical bio provided during account registration.</li>
-            <li>Authentication credentials and identifiers managed securely via Supabase Auth.</li>
+            <li>Name, age, gender, email address, and subscription tier selection provided during account registration.</li>
+            <li>Authentication credentials and device security tokens managed via Supabase Cloud Auth.</li>
           </ul>
 
-          <h3>B. Fitness & Health Metrics</h3>
+          <h3>B. Biometric & Wellness Telemetry</h3>
           <ul>
-            <li>Workout logs, activity durations, estimated caloric burn, step counts, average pace, splits, and user-selected training goals.</li>
-            <li>Heart rate, elevation changes, and performance streak records.</li>
+            <li>Daily logs across sleep duration and sleep quality, HRV (Heart Rate Variability), step counts, active calories, fluid ounces, nutrition tags, focus ratings, and cycle phase information.</li>
+            <li>Wearable sync records from Apple Health, Google Fit, Garmin, or Fitbit when explicitly connected by you.</li>
           </ul>
 
-          <h3>C. Social & Community Content</h3>
+          <h3>C. AI Interactions & Habit Logging</h3>
           <ul>
-            <li>Workout posts, user captions, shared photos, comments, likes, and direct community messages exchanged between athletes.</li>
+            <li>Conversations, queries, and check-ins with Haven AI Coach to generate personalized health protocols.</li>
+            <li>Program progress, milestone completions, and habit streak records.</li>
           </ul>
 
-          <h3>D. Technical & Diagnostic Data</h3>
+          <h3>D. Technical & Security Telemetry</h3>
           <ul>
-            <li>Device model, operating system version (iOS/Android), unique device tokens for push notifications, and crash telemetry (processed via Sentry) to diagnose stability issues.</li>
+            <li>Device type, operating system version (iOS/Android), and diagnostic crash telemetry via Sentry to ensure application stability.</li>
           </ul>
         </div>
 
         <div class="legal-section">
           <h2>4. Third-Party Service Providers</h2>
-          <p>We work with trusted industry-leading infrastructure partners to power Thrive's functionalities under strict data processing agreements:</p>
+          <p>We work with trusted infrastructure partners to power Thrive's functionalities under strict data processing agreements:</p>
           <ul>
-            <li><strong>Supabase:</strong> Scalable cloud database hosting, real-time sync, and encrypted user authentication.</li>
-            <li><strong>Firebase (Google Cloud):</strong> Push notifications (FCM) to deliver live activity notifications and community alerts.</li>
-            <li><strong>Mapbox GL & OpenStreetMap:</strong> Map tiles, route visualization, and spatial rendering.</li>
+            <li><strong>Supabase:</strong> Scalable cloud database hosting, Row-Level Security (RLS), and encrypted authentication.</li>
+            <li><strong>Firebase / FCM:</strong> Push notifications for daily check-in reminders and streak alerts.</li>
             <li><strong>Sentry:</strong> Application crash tracking and diagnostic error reporting (strictly non-identifying telemetry).</li>
           </ul>
         </div>
@@ -98,22 +100,21 @@
         <div class="legal-section">
           <h2>5. How We Use Your Information</h2>
           <ul>
-            <li>To provide, personalize, and optimize our fitness tracking and wellness tools.</li>
-            <li>To accurately render GPS workout maps, distance analytics, and elevation calculations.</li>
-            <li>To enable social feed interactions, community leaderboards, and direct messaging.</li>
-            <li>To send workout reminders, streak notifications, and critical account security alerts.</li>
-            <li>To detect, prevent, and fix technical bugs and ensure app performance.</li>
+            <li>To compute your daily composite health score and identify recovery opportunities.</li>
+            <li>To deliver adaptive, science-backed guidance through the Haven AI Coach.</li>
+            <li>To support structured 21-day wellness programs and habit consistency tracking.</li>
+            <li>To sync biometric inputs from connected smartwatches and fitness wearables.</li>
+            <li>To protect your account against unauthorized access and maintain app security.</li>
           </ul>
-          <p><strong>We do NOT sell, rent, or trade your personal health, location, or biometric data to third-party advertisers or data brokers under any circumstances.</strong></p>
         </div>
 
         <div class="legal-section">
           <h2>6. User Rights & Data Deletion</h2>
-          <p>In accordance with global privacy laws (including GDPR, CCPA, and Apple/Google store requirements), you have the right to:</p>
+          <p>In accordance with global privacy regulations (GDPR, CCPA, and App Store/Google Play requirements), you have the right to:</p>
           <ul>
-            <li>Access, download, or export a copy of your stored workout logs and profile data.</li>
+            <li>Access, download, or export a copy of your stored biometric records and profile data.</li>
             <li>Modify or update inaccurate account information directly from your profile settings.</li>
-            <li><strong>Permanently Delete Your Account & All Associated Data:</strong> You may trigger account deletion immediately within the Thrive mobile app under <em>Profile &rarr; Settings &rarr; Delete Account</em>, or submit a request directly through our web <a href="support.html#account-deletion" style="color: #10b981;">Support Portal</a>. Upon confirmation, all your stored workout logs, routes, and account identifiers will be permanently expunged from our databases within 30 days.</li>
+            <li><strong>Permanently Delete Your Account & All Associated Data:</strong> You may trigger account deletion immediately within the Thrive mobile app under <em>Profile &rarr; Settings &rarr; Delete Account</em>, or submit a request directly through our web <a href="support.html#account-deletion" style="color: var(--primary);">Support Portal</a>. Upon confirmation, all your stored biometric records and account identifiers will be permanently expunged within 30 days.</li>
           </ul>
         </div>
 
@@ -123,8 +124,8 @@
           <div class="legal-box" style="background: rgba(255,255,255,0.03); border-color: var(--border-color);">
             <p>
               <strong>Thrive Wellness Privacy Office</strong><br>
-              Email: <a href="mailto:privacy@thrivewellness.app" style="color: #10b981;">privacy@thrivewellness.app</a><br>
-              General Inquiries: <a href="mailto:support@thrivewellness.app" style="color: #10b981;">support@thrivewellness.app</a>
+              Email: <a href="mailto:privacy@thrivewellness.app" style="color: var(--primary);">privacy@thrivewellness.app</a><br>
+              General Inquiries: <a href="mailto:support@thrivewellness.app" style="color: var(--primary);">support@thrivewellness.app</a>
             </p>
           </div>
         </div>
@@ -138,24 +139,26 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a href="index.html" class="logo" style="margin-bottom: 14px; display: inline-flex;">
-            <div class="logo-icon">🌿</div>
+            <img src="logo.png" alt="Thrive Logo" class="logo-img">
             <span>Thrive</span>
           </a>
-          <p style="font-size: 0.9rem;">Elevate your wellness with precision GPS activity tracking and an inspiring community.</p>
+          <p style="font-size: 0.9rem;">AI-powered holistic wellness platform tracking 8 pillars, real-time recovery scores, and personalized Haven AI coaching.</p>
         </div>
         <div class="footer-col">
-          <h4>Links</h4>
+          <h4>Explore</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#features">Features</a></li>
-            <li><a href="support.html">Support</a></li>
+            <li><a href="index.html#pillars">8 Pillars</a></li>
+            <li><a href="index.html#coach">Haven AI</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Legal & Support</h4>
           <ul>
-            <li><a href="privacy.html" style="color: #10b981;">Privacy Policy</a></li>
+            <li><a href="privacy.html" style="color: var(--primary);">Privacy Policy</a></li>
             <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="support.html">Support Center</a></li>
             <li><a href="support.html#account-deletion">Delete Account</a></li>
           </ul>
         </div>

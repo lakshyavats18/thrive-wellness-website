@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thrive — Precision Fitness, GPS Workout Tracking & Community</title>
-  <meta name="description" content="Elevate your wellness with Thrive. Track your runs and workouts with high-accuracy background GPS, analyze live pace and elevation, and connect with a thriving fitness community.">
-  <meta name="keywords" content="Thrive wellness, fitness tracker, running app, GPS workout tracker, community fitness, health tracker">
+  <title>Thrive — AI-Powered Holistic Health & Recovery Platform</title>
+  <meta name="description" content="Stop guessing. Start thriving. Thrive connects sleep, stress, activity, and nutrition into a single AI-powered wellness score with personalized coaching from Haven AI.">
+  <meta name="keywords" content="Thrive wellness, holistic health, daily health score, Haven AI coach, sleep tracker, stress HRV, nutrition, fitness, Apple Health sync">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Thrive — Elevate Your Movement">
-  <meta property="og:description" content="Precision GPS route tracking, wellness analytics, and a social fitness community.">
+  <meta property="og:title" content="Thrive — AI-Powered Holistic Health & Recovery Platform">
+  <meta property="og:description" content="Calculate your daily health score, optimize sleep, regulate stress with HRV biofeedback, and access the Haven AI health coach.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.png">
   
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2310b981'/><text y='70' x='50' font-size='60' text-anchor='middle' fill='%23080c14' font-family='sans-serif' font-weight='bold'>T</text></svg>">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
@@ -25,16 +27,17 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-icon">🌿</div>
+        <img src="logo.png" alt="Thrive Logo" class="logo-img">
         <span>Thrive</span>
       </a>
 
       <ul class="nav-links">
+        <li><a href="#pillars">8 Pillars</a></li>
+        <li><a href="#coach">Haven AI</a></li>
         <li><a href="#features">Features</a></li>
-        <li><a href="#showcase">Experience</a></li>
+        <li><a href="#pricing">Plans</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="support.html">Support</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -51,14 +54,14 @@
         <div class="hero-content">
           <div class="highlight-badge">
             <span class="dot"></span>
-            <span>Version 1.0 Now Available</span>
+            <span>✨ AI-Powered Holistic Wellness</span>
           </div>
           <h1>
-            Elevate Your Movement. <br>
-            <span class="gradient-text">Transform Your Life.</span>
+            Stop guessing. <br>
+            <span class="gradient-text">Start thriving.</span>
           </h1>
           <p class="hero-subtitle">
-            Thrive is your all-in-one health and workout companion. Experience precision background GPS tracking, actionable recovery insights, and a vibrant community of athletes pushing their limits together.
+            Your body is constantly sending signals. Thrive synthesizes sleep, stress, activity, nutrition, and recovery into a single real-time Daily Wellness Score with 24/7 personalized guidance from Haven AI.
           </p>
 
           <div class="store-badges" id="download">
@@ -85,103 +88,127 @@
             </a>
           </div>
 
-          <div style="display: flex; align-items: center; gap: 14px; font-size: 0.88rem; color: var(--text-sub);">
-            <span>✓ No Ads</span>
+          <div class="trust-signals">
+            <span class="live-dot"></span>
+            <span><strong>1,200+</strong> wellness scores calculated</span>
             <span>•</span>
-            <span>✓ Background GPS Tracking</span>
-            <span>•</span>
-            <span>✓ Privacy First</span>
+            <span>Works with <strong>Apple Health</strong> & <strong>Google Fit</strong></span>
           </div>
         </div>
 
-        <!-- Phone Mockup -->
+        <!-- Phone Mockup — Authentic Daily Health Score Screen -->
         <div class="hero-visual">
           <div class="floating-chip chip-1">
-            <span style="font-size: 1.2rem;">⚡</span>
+            <span style="font-size: 1.3rem;">🎯</span>
             <div>
-              <strong style="font-size: 0.85rem; color: #fff; display: block;">Live Pace</strong>
-              <span style="font-size: 0.75rem; color: #10b981;">4'52" /km (Pacing Fast)</span>
+              <strong style="font-size: 0.85rem; color: #fff; display: block;">Daily Score: 88/100</strong>
+              <span style="font-size: 0.75rem; color: var(--primary);">Optimal Readiness & Energy</span>
             </div>
           </div>
 
           <div class="phone-wrapper">
             <div class="phone-notch"></div>
             <div class="phone-screen">
-              <!-- Simulated App Screen -->
-              <div class="phone-header">
-                <div class="phone-user-chip">
-                  <div class="phone-avatar">M</div>
-                  <span>Morning Workout</span>
+              <!-- Top Greeting Bar -->
+              <div class="phone-top-bar">
+                <div class="phone-user-badge">
+                  <div class="phone-avatar">T</div>
+                  <div class="phone-greeting">
+                    <span>Good morning,</span>
+                    <strong>Alex Johnson</strong>
+                  </div>
                 </div>
-                <span style="font-size: 0.75rem; color: #10b981; font-weight: 700;">GPS ACTIVE</span>
-              </div>
-
-              <!-- Map Simulation -->
-              <div class="phone-map-card">
-                <svg class="map-svg-bg" viewBox="0 0 200 120">
-                  <path d="M 20 80 Q 60 20, 100 60 T 180 30" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" stroke-dasharray="6,4"/>
-                  <circle cx="180" cy="30" r="5" fill="#06b6d4" />
-                </svg>
-                <div class="map-live-tag">LIVE GPS ROUTE</div>
-                <div class="map-metrics">
-                  <div>
-                    <span>DISTANCE</span>
-                    <strong>8.42 km</strong>
-                  </div>
-                  <div>
-                    <span>AVG PACE</span>
-                    <strong>5'10"</strong>
-                  </div>
-                  <div>
-                    <span>TIME</span>
-                    <strong>43:18</strong>
-                  </div>
+                <div class="phone-streak-pill">
+                  🔥 14 Days
                 </div>
               </div>
 
-              <!-- Stats Grid -->
-              <div class="phone-stats-grid">
-                <div class="stat-box">
-                  <span class="stat-label">CALORIES</span>
-                  <div class="stat-val">642 kcal</div>
-                  <div class="stat-progress-bar">
-                    <div class="stat-progress-fill" style="width: 78%;"></div>
+              <!-- Central Score Card -->
+              <div class="phone-score-card">
+                <div class="phone-score-ring-wrap">
+                  <svg class="score-svg" viewBox="0 0 100 100">
+                    <defs>
+                      <linearGradient id="coral-amber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ff6b6b"/>
+                        <stop offset="100%" stop-color="#f59e0b"/>
+                      </linearGradient>
+                    </defs>
+                    <circle class="score-circle-bg" cx="50" cy="50" r="42"/>
+                    <circle class="score-circle-val" cx="50" cy="50" r="42"/>
+                  </svg>
+                  <div class="score-center-text">
+                    <div class="score-num">88</div>
+                    <div class="score-sub">OPTIMAL</div>
                   </div>
                 </div>
-                <div class="stat-box">
-                  <span class="stat-label">HEART RATE</span>
-                  <div class="stat-val" style="color: #f43f5e;">148 bpm</div>
-                  <div class="stat-progress-bar">
-                    <div class="stat-progress-fill" style="width: 65%; background: #f43f5e;"></div>
+                <div class="score-verdict">
+                  Recovery readiness is <strong>high</strong> today.
+                </div>
+              </div>
+
+              <!-- 4-Pillar Status Preview -->
+              <div class="phone-pillars-grid">
+                <div class="phone-pillar-box sleep">
+                  <div class="phone-pillar-header">
+                    <span>🌙 SLEEP</span>
+                    <span style="color: var(--pillar-sleep);">92%</span>
+                  </div>
+                  <div class="phone-pillar-val">7h 48m</div>
+                  <div class="phone-pillar-bar">
+                    <div class="phone-pillar-fill" style="width: 92%; background: var(--pillar-sleep);"></div>
                   </div>
                 </div>
-                <div class="stat-box">
-                  <span class="stat-label">ELEVATION</span>
-                  <div class="stat-val">+142 m</div>
-                  <div class="stat-progress-bar">
-                    <div class="stat-progress-fill" style="width: 45%; background: #06b6d4;"></div>
+
+                <div class="phone-pillar-box stress">
+                  <div class="phone-pillar-header">
+                    <span>🍃 STRESS</span>
+                    <span style="color: var(--pillar-stress);">68ms</span>
+                  </div>
+                  <div class="phone-pillar-val">HRV Calm</div>
+                  <div class="phone-pillar-bar">
+                    <div class="phone-pillar-fill" style="width: 85%; background: var(--pillar-stress);"></div>
                   </div>
                 </div>
-                <div class="stat-box">
-                  <span class="stat-label">DAILY STREAK</span>
-                  <div class="stat-val" style="color: #f59e0b;">🔥 14 Days</div>
-                  <div class="stat-progress-bar">
-                    <div class="stat-progress-fill" style="width: 90%; background: #f59e0b;"></div>
+
+                <div class="phone-pillar-box movement">
+                  <div class="phone-pillar-header">
+                    <span>⚡ STEPS</span>
+                    <span style="color: var(--pillar-movement);">8.4k</span>
+                  </div>
+                  <div class="phone-pillar-val">8,420</div>
+                  <div class="phone-pillar-bar">
+                    <div class="phone-pillar-fill" style="width: 84%; background: var(--pillar-movement);"></div>
+                  </div>
+                </div>
+
+                <div class="phone-pillar-box hydration">
+                  <div class="phone-pillar-header">
+                    <span>💧 WATER</span>
+                    <span style="color: var(--pillar-hydration);">7/8</span>
+                  </div>
+                  <div class="phone-pillar-val">1.75 L</div>
+                  <div class="phone-pillar-bar">
+                    <div class="phone-pillar-fill" style="width: 88%; background: var(--pillar-hydration);"></div>
                   </div>
                 </div>
               </div>
 
-              <div style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); border-radius: 12px; padding: 10px; font-size: 0.72rem; color: #a7f3d0; text-align: center;">
-                🏆 You unlocked a new 5K personal record today!
+              <!-- Haven AI Bubble -->
+              <div class="phone-haven-bubble">
+                <span>🤖</span>
+                <div>
+                  <strong>Haven AI Coach</strong>
+                  <p>HRV is up 15%. Your parasympathetic balance is primed for cardiovascular training today.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="floating-chip chip-2">
-            <span style="font-size: 1.2rem;">🔥</span>
+            <span style="font-size: 1.3rem;">🤖</span>
             <div>
-              <strong style="font-size: 0.85rem; color: #fff; display: block;">Streak Record</strong>
-              <span style="font-size: 0.75rem; color: #f59e0b;">14 Days Active</span>
+              <strong style="font-size: 0.85rem; color: #fff; display: block;">Haven AI Coach</strong>
+              <span style="font-size: 0.75rem; color: #34d399;">Science-Backed Protocol Ready</span>
             </div>
           </div>
         </div>
@@ -194,20 +221,170 @@
     <div class="container">
       <div class="metrics-grid">
         <div class="metric-item">
-          <strong>100,000+</strong>
-          <span>Kilometers Tracked</span>
+          <strong>1,200+</strong>
+          <span>Wellness Scores Computed</span>
         </div>
         <div class="metric-item">
-          <strong>99.9%</strong>
-          <span>GPS Route Accuracy</span>
+          <strong>8</strong>
+          <span>Holistic Health Pillars</span>
         </div>
         <div class="metric-item">
           <strong>24/7</strong>
-          <span>Real-Time Activity Sync</span>
+          <span>Adaptive AI Coaching</span>
         </div>
         <div class="metric-item">
-          <strong>4.9 ★</strong>
-          <span>Athlete Satisfaction</span>
+          <strong>99.4%</strong>
+          <span>Member Retention & Trust</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Health Pillars Section -->
+  <section class="section" id="pillars">
+    <div class="container">
+      <div class="section-header">
+        <div class="highlight-badge">
+          <span>The Holistic Framework</span>
+        </div>
+        <h2>The Eight Pillars of Thrive</h2>
+        <p>Thrive unifies every critical health signal into a harmonious dashboard, identifying your highest leverage opportunities for energy and recovery.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- 1. Sleep -->
+        <div class="pillar-card sleep">
+          <div class="pillar-icon">🌙</div>
+          <div class="pillar-tagline">Decode Your Nights</div>
+          <h3>Sleep Optimization</h3>
+          <p>Circadian rhythm analysis, sleep architecture tracking (NREM/REM ratio), and wind-down consistency protocols.</p>
+        </div>
+
+        <!-- 2. Stress -->
+        <div class="pillar-card stress">
+          <div class="pillar-icon">🍃</div>
+          <div class="pillar-tagline">Find Your Calm Frequency</div>
+          <h3>Stress & HRV Regulation</h3>
+          <p>Heart Rate Variability tracking, autonomic nervous system biofeedback, and guided box-breathing triggers.</p>
+        </div>
+
+        <!-- 3. Movement -->
+        <div class="pillar-card movement">
+          <div class="pillar-icon">⚡</div>
+          <div class="pillar-tagline">Move With Purpose</div>
+          <h3>Movement & Activity</h3>
+          <p>Automatic step sync, cardiovascular training zones, active calorie calculation, and milestone achievements.</p>
+        </div>
+
+        <!-- 4. Hydration -->
+        <div class="pillar-card hydration">
+          <div class="pillar-icon">💧</div>
+          <div class="pillar-tagline">8 Cups A Day</div>
+          <h3>Smart Hydration</h3>
+          <p>Rapid one-tap fluid logging, weather-adjusted water targets, and optimal electrolyte balance reminders.</p>
+        </div>
+
+        <!-- 5. Nutrition -->
+        <div class="pillar-card nutrition">
+          <div class="pillar-icon">🥗</div>
+          <div class="pillar-tagline">Fuel Your Potential</div>
+          <h3>Nutrition & Fasting</h3>
+          <p>Intermittent fasting window timers, macronutrient quality checkpoints, and anti-inflammatory food logs.</p>
+        </div>
+
+        <!-- 6. Mind & Energy -->
+        <div class="pillar-card mind">
+          <div class="pillar-icon">🧠</div>
+          <div class="pillar-tagline">Focus & Vitality</div>
+          <h3>Mind & Energy Flow</h3>
+          <p>Daily focus ratings, afternoon slump alerts, caffeine cutoff timing, and cognitive performance checks.</p>
+        </div>
+
+        <!-- 7. Mental Health -->
+        <div class="pillar-card mental">
+          <div class="pillar-icon">✨</div>
+          <div class="pillar-tagline">Emotional Balance</div>
+          <h3>Mental Health Logger</h3>
+          <p>Reflective mood journals, gratitude prompts, cognitive check-ins, and supportive AI-assisted reframing.</p>
+        </div>
+
+        <!-- 8. Period & Cycle (Luna) -->
+        <div class="pillar-card cycle">
+          <div class="pillar-icon">❤️</div>
+          <div class="pillar-tagline">Luna AI Cycle Sync</div>
+          <h3>Cycle & Phase Tracking</h3>
+          <p>Menstrual phase correlation with sleep, training intensity adjustments, and hormone-aware wellness guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Haven AI Showcase Section -->
+  <section class="section" id="coach">
+    <div class="container">
+      <div class="haven-showcase-grid">
+        <div class="haven-showcase-text">
+          <div class="highlight-badge">24/7 AI Health Companion</div>
+          <h2>Meet Haven: Your Adaptive AI Health Coach</h2>
+          <p>Haven doesn't give generic tips. It reads your live biometric trends and recommends tailored, science-backed protocols for high-stakes days, poor sleep, or stress spikes.</p>
+
+          <!-- Persona Selector Buttons -->
+          <div class="persona-switcher">
+            <button class="persona-btn active" data-persona="science">
+              <span class="persona-btn-emoji">🔬</span>
+              <div class="persona-btn-title">
+                <strong>Science Nerd</strong>
+                <span>Biometric Protocols</span>
+              </div>
+            </button>
+
+            <button class="persona-btn" data-persona="zen">
+              <span class="persona-btn-emoji">🧘</span>
+              <div class="persona-btn-title">
+                <strong>Zen Master</strong>
+                <span>Mindful Clarity</span>
+              </div>
+            </button>
+
+            <button class="persona-btn" data-persona="hype">
+              <span class="persona-btn-emoji">🔥</span>
+              <div class="persona-btn-title">
+                <strong>Hype Coach</strong>
+                <span>High Energy Drive</span>
+              </div>
+            </button>
+          </div>
+
+          <div style="display: flex; gap: 14px; align-items: center; font-size: 0.9rem; color: var(--text-muted);">
+            <span>✓ Personalized to your HRV</span>
+            <span>•</span>
+            <span>✓ 21-Day Action Plans</span>
+          </div>
+        </div>
+
+        <!-- Interactive Dynamic Chat Card -->
+        <div class="chat-card">
+          <div class="chat-card-header">
+            <div class="chat-coach-info">
+              <div class="chat-coach-avatar" id="coach-avatar">🔬</div>
+              <div>
+                <strong style="font-size: 0.95rem; color: #fff; display: block;" id="coach-name">Haven (Science Nerd)</strong>
+                <span style="font-size: 0.75rem; color: var(--primary);" id="coach-tag">Science-Backed Protocols</span>
+              </div>
+            </div>
+            <span style="font-size: 0.72rem; background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); padding: 4px 10px; border-radius: 999px; font-weight: 600;">
+              Live Coach Session
+            </span>
+          </div>
+
+          <div class="chat-bubble-stream" id="chat-stream">
+            <div class="chat-bubble user">
+              I only slept 5.5 hours. Have a high-stakes presentation at 2 PM today.
+            </div>
+            <div class="chat-bubble coach" id="coach-response">
+              Got it. Let's delay your caffeine intake until 10:30 AM to maximize natural cortisol spikes. Plan a 20-min power nap at 1:00 PM to clear adenosine buildup, and run a 4-7-8 breathing sequence right before speaking. Skip heavy lifting tonight — your HRV is 12% down.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -218,136 +395,200 @@
     <div class="container">
       <div class="section-header">
         <div class="highlight-badge">
-          <span>Engineered For Performance</span>
+          <span>Engineered For Transformation</span>
         </div>
-        <h2>Every Feature Built to Keep You Moving</h2>
-        <p>Thrive bridges cutting-edge mobile geolocation with social workout dynamics to give you an uncompromising fitness experience.</p>
+        <h2>Everything Built to Keep You Thriving</h2>
+        <p>Thrive bridges cutting-edge health science with intuitive tracking so you can take control of your well-being in under 60 seconds a day.</p>
       </div>
 
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">📍</div>
-          <h3>Background GPS Tracking</h3>
-          <p>Record accurate workout routes even when your screen is locked. Smart battery optimization ensures you never lose a stride or run out of power.</p>
+          <div class="feature-icon">🎯</div>
+          <h3>Daily Health Score</h3>
+          <p>Synthesizes your 8 health pillars into a real-time 0–100 recovery score, showing exactly where your body stands each morning.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>Intelligent Analytics</h3>
-          <p>Break down splits, heart rate exertion zones, cadence, and elevation profiles with crystal clear interactive charts.</p>
+          <div class="feature-icon">⌚</div>
+          <h3>Wearable Integration</h3>
+          <p>Seamless two-way sync with Apple Health, Google Fit, Garmin, and Fitbit for automated step, heart rate, and sleep tracking.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>21-Day Guided Programs</h3>
+          <p>Follow structured habit-building programs for Deep Sleep, Stress Detox, Core Mobility, and Metabolic Energy.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">👥</div>
-          <h3>Thriving Community</h3>
-          <p>Share your workout routes, celebrate milestones, exchange direct encouragement with athlete direct messaging, and join challenges.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">🎯</div>
-          <h3>Custom Training Programs</h3>
-          <p>Follow structured plans crafted for 5K races, marathons, HIIT, and endurance building tailored to your baseline fitness level.</p>
+          <h3>Inspiring Community</h3>
+          <p>Share daily milestones, celebrate score streaks, and join supportive accountability circles with wellness enthusiasts.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
-          <h3>Instant Sync & Cloud Auth</h3>
-          <p>Powered by ultra-fast Supabase infrastructure. Your activities and workout logs are instantly saved and safely accessible anywhere.</p>
+          <h3>Cloud Sync & Auth</h3>
+          <p>Ultra-fast data persistence powered by Supabase with real-time biometric synchronization across all your devices.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">🛡️</div>
           <h3>Uncompromised Privacy</h3>
-          <p>Your location data belongs to you. Choose what routes to publish publicly and what stays completely private.</p>
+          <p>Your biometric telemetry is encrypted at rest and in transit. Your private health data is never sold or shared with advertisers.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience & Showcase Section -->
-  <section class="section" id="showcase">
+  <!-- Pricing Section -->
+  <section class="section" id="pricing">
     <div class="container">
-      <div class="showcase-grid">
-        <div class="showcase-text">
-          <div class="highlight-badge">Seamless Flow</div>
-          <h3>Designed with Polish, Built for Pure Speed</h3>
-          <p>Thrive combines a frictionless user interface with dark glass aesthetics so you can start a run in two taps without complicated setups.</p>
-          <ul class="showcase-list">
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Instant live GPS tracking with automatic pause detection
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Social feed with likes, nested comments, and private direct chat
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Personal records, streaks, and milestone badge achievements
-            </li>
-          </ul>
+      <div class="section-header">
+        <div class="highlight-badge">
+          <span>Flexible Membership</span>
         </div>
-        <div class="showcase-card">
-          <div style="text-align: center; padding: 20px 0;">
-            <div style="font-size: 3.5rem; margin-bottom: 12px;">🏃💨</div>
-            <h4 style="font-size: 1.3rem; margin-bottom: 6px;">Live Activity Mode</h4>
-            <p style="font-size: 0.9rem; color: var(--text-sub); max-width: 320px; margin: 0 auto 20px;">Continuous foreground service keeps your pace, distance, and calories live on your lock screen.</p>
-            <div style="display: inline-flex; gap: 8px; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; color: #10b981; font-weight: 600;">
-              Active in iOS & Android
-            </div>
+        <h2>Invest in Your Well-Being</h2>
+        <p>Start 100% free with core 8-pillar tracking, or unlock unlimited AI Haven Coaching and advanced trend analysis.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Free Tier -->
+        <div class="pricing-card">
+          <div>
+            <div class="pricing-tier-name">Free</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Essential daily tracking</p>
+            <div class="pricing-price">$0 <span>/ forever</span></div>
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 8 Health Pillars Tracking</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Daily Health Score Calculation</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Apple Health & Fit Sync</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Community Access</li>
+            </ul>
           </div>
+          <a href="#download" class="btn btn-secondary" style="width: 100%;">Get Started Free</a>
+        </div>
+
+        <!-- Starter Tier -->
+        <div class="pricing-card">
+          <div>
+            <div class="pricing-tier-name">Starter</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">For habit builders</p>
+            <div class="pricing-price">$4.99 <span>/ month</span></div>
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Everything in Free</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 10 Daily Haven AI Chats</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 14-Day Biometric Trends</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1 Active 21-Day Program</li>
+            </ul>
+          </div>
+          <a href="#download" class="btn btn-secondary" style="width: 100%;">Start Starter</a>
+        </div>
+
+        <!-- Premium Tier (Featured) -->
+        <div class="pricing-card featured">
+          <div class="popular-badge">Most Popular</div>
+          <div>
+            <div class="pricing-tier-name" style="color: var(--primary);">Premium</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Holistic health mastery</p>
+            <div class="pricing-price">$9.99 <span>/ month</span></div>
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlimited Haven AI Coach</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> All 3 Coach Personas</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> All 21-Day Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Deep Cross-Pillar Analytics</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Luna AI Cycle Correlation</li>
+            </ul>
+          </div>
+          <a href="#download" class="btn btn-primary" style="width: 100%;">Try Premium Free</a>
+        </div>
+
+        <!-- Elite Tier -->
+        <div class="pricing-card">
+          <div>
+            <div class="pricing-tier-name" style="color: var(--accent-amber);">Elite</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Maximum performance</p>
+            <div class="pricing-price">$19.99 <span>/ month</span></div>
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Everything in Premium</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Priority Protocol Generation</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Advanced Biomarker Correlation</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> VIP Direct Support</li>
+            </ul>
+          </div>
+          <a href="#download" class="btn btn-secondary" style="width: 100%;">Unlock Elite</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
+  <!-- FAQ Section (Authentic to App) -->
   <section class="section" id="faq">
     <div class="container">
       <div class="section-header">
         <div class="highlight-badge">Common Inquiries</div>
         <h2>Frequently Asked Questions</h2>
-        <p>Everything you need to know about getting started with Thrive.</p>
+        <p>Everything you need to know about the Thrive health and AI coaching platform.</p>
       </div>
 
       <div class="faq-list">
-        <div class="faq-item">
+        <div class="faq-item active">
           <button class="faq-question">
-            <span>How does Thrive track my workouts in the background?</span>
+            <span>How does Thrive calculate my Daily Health Score?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Thrive uses high-accuracy native GPS location providers with dedicated foreground notification services. When you start an activity and lock your screen or switch apps, tracking continues reliably without losing GPS signal.</p>
+            <p>Thrive synthesizes your 8 health pillars (Sleep, Stress, Movement, Hydration, Nutrition, Mind & Energy, Mental Health, and Cycle Phase) using weighted biometric scoring. It evaluates HRV trends, sleep cycle architecture (NREM/REM ratio), daily step volume, and hydration compliance to generate a real-time recovery and readiness score from 0 to 100.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>Is my personal location data secure?</span>
+            <span>How does the Haven AI Health Coach personalize protocols?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Yes. Your privacy is paramount. Your route data is encrypted in transit and at rest using enterprise-grade Supabase database security. You decide whether an activity is shared with friends or stored as private.</p>
+            <p>Haven acts as your 24/7 personal wellness advisor. Rather than generic advice, Haven analyzes your real-time logged biometrics and past trends to deliver actionable, science-backed protocols—such as optimal caffeine cutoffs, targeted 4-7-8 or box breathing exercises when stress spikes, and adaptive meal timing windows.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>Is Thrive available on both iOS and Android?</span>
+            <span>Do I need a smartwatch or fitness tracker to use Thrive?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Yes! Thrive is natively packaged and optimized for both iOS (iPhone) and Android smartphones.</p>
+            <p>No! While Thrive seamlessly syncs with Apple Health, Google Fit, Garmin, and Fitbit for automatic biometric tracking, all 8 pillars support rapid manual logging in under 60 seconds a day.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>How can I delete my account or stored data?</span>
+            <span>How does the Luna cycle tracker connect with other wellness pillars?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>You have full control. You can delete your account directly from the Profile Settings tab in the mobile app or submit a deletion request via our <a href="support.html" style="color: #10b981;">Support Portal</a> at any time.</p>
+            <p>Luna correlates your follicular, ovulatory, luteal, and menstrual phases with your sleep quality, energy levels, and HRV. It provides phase-specific recommendations for nutrition, training intensity, and sleep recovery.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is my biometric and health data safe and private?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. All wellness records and AI interactions are protected with enterprise-grade row-level security and end-to-end encryption on Supabase cloud infrastructure. Your private health telemetry is never shared or sold to third-party advertisers.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the difference between the Free tier, Premium, and Elite?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Our core tracking and 8-pillar logs are 100% free forever. Premium unlocks unlimited interactions with the personalized Haven AI Coach, deep multi-week trends analysis, and full access to our structured 21-day wellness programs. Elite adds priority protocol generation and advanced biomarker correlations.</p>
           </div>
         </div>
       </div>
@@ -357,10 +598,10 @@
   <!-- CTA Banner -->
   <div class="container">
     <div class="cta-banner">
-      <h2>Ready to Start Your Journey?</h2>
-      <p>Download Thrive today and join athletes around the globe pushing their boundaries every day.</p>
+      <h2>Ready to Transform Your Health?</h2>
+      <p>Download Thrive today and join thousands of members understanding their bodies and optimizing their wellness with AI.</p>
       <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <a href="#download" class="btn btn-primary">Download Thrive Now</a>
+        <a href="#download" class="btn btn-primary">Download Thrive App</a>
         <a href="support.html" class="btn btn-secondary">Contact Support</a>
       </div>
     </div>
@@ -372,19 +613,19 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a href="index.html" class="logo" style="margin-bottom: 14px; display: inline-flex;">
-            <div class="logo-icon">🌿</div>
+            <img src="logo.png" alt="Thrive Logo" class="logo-img">
             <span>Thrive</span>
           </a>
-          <p style="font-size: 0.9rem; max-width: 280px;">Elevate your wellness with precision GPS activity tracking, intelligent metrics, and an active fitness community.</p>
+          <p style="font-size: 0.9rem; max-width: 280px;">AI-powered holistic wellness platform tracking 8 pillars, real-time recovery scores, and personalized Haven AI coaching.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Explore</h4>
           <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#showcase">Experience</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#download">Download App</a></li>
+            <li><a href="#pillars">8 Health Pillars</a></li>
+            <li><a href="#coach">Haven AI Coach</a></li>
+            <li><a href="#features">Platform Features</a></li>
+            <li><a href="#pricing">Membership Plans</a></li>
           </ul>
         </div>
 
@@ -399,15 +640,15 @@
         </div>
 
         <div class="footer-col">
-          <h4>Contact</h4>
-          <p style="font-size: 0.88rem; margin-bottom: 10px;">For inquiries, support, or privacy questions:</p>
+          <h4>Contact & Inquiries</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 10px;">For questions, feedback, or member support:</p>
           <a href="mailto:support@thrivewellness.app" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">support@thrivewellness.app</a>
         </div>
       </div>
 
       <div class="footer-bottom">
         <span>© 2026 Thrive Wellness. All rights reserved.</span>
-        <span>Crafted for athletes and fitness enthusiasts.</span>
+        <span>Designed for holistic wellness & human vitality.</span>
       </div>
     </div>
   </footer>
