@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thrive — Precision Fitness, GPS Workout Tracking & Community</title>
+  <meta name="description" content="Elevate your wellness with Thrive. Track your runs and workouts with high-accuracy background GPS, analyze live pace and elevation, and connect with a thriving fitness community.">
+  <meta name="keywords" content="Thrive wellness, fitness tracker, running app, GPS workout tracker, community fitness, health tracker">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thrive — Elevate Your Movement">
+  <meta property="og:description" content="Precision GPS route tracking, wellness analytics, and a social fitness community.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2310b981'/><text y='70' x='50' font-size='60' text-anchor='middle' fill='%23080c14' font-family='sans-serif' font-weight='bold'>T</text></svg>">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌿</div>
+        <span>Thrive</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#showcase">Experience</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary btn-sm">Get App</a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="highlight-badge">
+            <span class="dot"></span>
+            <span>Version 1.0 Now Available</span>
+          </div>
+          <h1>
+            Elevate Your Movement. <br>
+            <span class="gradient-text">Transform Your Life.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Thrive is your all-in-one health and workout companion. Experience precision background GPS tracking, actionable recovery insights, and a vibrant community of athletes pushing their limits together.
+          </p>
+
+          <div class="store-badges" id="download">
+            <!-- App Store Badge -->
+            <a href="#" class="badge-btn">
+              <svg viewBox="0 0 384 512">
+                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-13.8 69.5-34.3z"/>
+              </svg>
+              <div class="badge-text">
+                <span>Download on the</span>
+                <strong>App Store</strong>
+              </div>
+            </a>
+
+            <!-- Google Play Badge -->
+            <a href="#" class="badge-btn">
+              <svg viewBox="0 0 512 512">
+                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 24 20.6 24 37.5v437c0 16.9 10 30.7 23 37.5L273.9 256 47 0zm394.5 228.6l-48.4-27.8-62.7 62.7 62.7 62.7 48.8-28.1c16.1-9.3 26.1-26.2 26.1-44.7s-9.9-35.5-26.5-44.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+              </svg>
+              <div class="badge-text">
+                <span>GET IT ON</span>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 14px; font-size: 0.88rem; color: var(--text-sub);">
+            <span>✓ No Ads</span>
+            <span>•</span>
+            <span>✓ Background GPS Tracking</span>
+            <span>•</span>
+            <span>✓ Privacy First</span>
+          </div>
+        </div>
+
+        <!-- Phone Mockup -->
+        <div class="hero-visual">
+          <div class="floating-chip chip-1">
+            <span style="font-size: 1.2rem;">⚡</span>
+            <div>
+              <strong style="font-size: 0.85rem; color: #fff; display: block;">Live Pace</strong>
+              <span style="font-size: 0.75rem; color: #10b981;">4'52" /km (Pacing Fast)</span>
+            </div>
+          </div>
+
+          <div class="phone-wrapper">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <!-- Simulated App Screen -->
+              <div class="phone-header">
+                <div class="phone-user-chip">
+                  <div class="phone-avatar">M</div>
+                  <span>Morning Workout</span>
+                </div>
+                <span style="font-size: 0.75rem; color: #10b981; font-weight: 700;">GPS ACTIVE</span>
+              </div>
+
+              <!-- Map Simulation -->
+              <div class="phone-map-card">
+                <svg class="map-svg-bg" viewBox="0 0 200 120">
+                  <path d="M 20 80 Q 60 20, 100 60 T 180 30" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round" stroke-dasharray="6,4"/>
+                  <circle cx="180" cy="30" r="5" fill="#06b6d4" />
+                </svg>
+                <div class="map-live-tag">LIVE GPS ROUTE</div>
+                <div class="map-metrics">
+                  <div>
+                    <span>DISTANCE</span>
+                    <strong>8.42 km</strong>
+                  </div>
+                  <div>
+                    <span>AVG PACE</span>
+                    <strong>5'10"</strong>
+                  </div>
+                  <div>
+                    <span>TIME</span>
+                    <strong>43:18</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stats Grid -->
+              <div class="phone-stats-grid">
+                <div class="stat-box">
+                  <span class="stat-label">CALORIES</span>
+                  <div class="stat-val">642 kcal</div>
+                  <div class="stat-progress-bar">
+                    <div class="stat-progress-fill" style="width: 78%;"></div>
+                  </div>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">HEART RATE</span>
+                  <div class="stat-val" style="color: #f43f5e;">148 bpm</div>
+                  <div class="stat-progress-bar">
+                    <div class="stat-progress-fill" style="width: 65%; background: #f43f5e;"></div>
+                  </div>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">ELEVATION</span>
+                  <div class="stat-val">+142 m</div>
+                  <div class="stat-progress-bar">
+                    <div class="stat-progress-fill" style="width: 45%; background: #06b6d4;"></div>
+                  </div>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">DAILY STREAK</span>
+                  <div class="stat-val" style="color: #f59e0b;">🔥 14 Days</div>
+                  <div class="stat-progress-bar">
+                    <div class="stat-progress-fill" style="width: 90%; background: #f59e0b;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); border-radius: 12px; padding: 10px; font-size: 0.72rem; color: #a7f3d0; text-align: center;">
+                🏆 You unlocked a new 5K personal record today!
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-chip chip-2">
+            <span style="font-size: 1.2rem;">🔥</span>
+            <div>
+              <strong style="font-size: 0.85rem; color: #fff; display: block;">Streak Record</strong>
+              <span style="font-size: 0.75rem; color: #f59e0b;">14 Days Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Bar -->
+  <section class="metrics-bar">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <strong>100,000+</strong>
+          <span>Kilometers Tracked</span>
+        </div>
+        <div class="metric-item">
+          <strong>99.9%</strong>
+          <span>GPS Route Accuracy</span>
+        </div>
+        <div class="metric-item">
+          <strong>24/7</strong>
+          <span>Real-Time Activity Sync</span>
+        </div>
+        <div class="metric-item">
+          <strong>4.9 ★</strong>
+          <span>Athlete Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="highlight-badge">
+          <span>Engineered For Performance</span>
+        </div>
+        <h2>Every Feature Built to Keep You Moving</h2>
+        <p>Thrive bridges cutting-edge mobile geolocation with social workout dynamics to give you an uncompromising fitness experience.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>Background GPS Tracking</h3>
+          <p>Record accurate workout routes even when your screen is locked. Smart battery optimization ensures you never lose a stride or run out of power.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Intelligent Analytics</h3>
+          <p>Break down splits, heart rate exertion zones, cadence, and elevation profiles with crystal clear interactive charts.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Thriving Community</h3>
+          <p>Share your workout routes, celebrate milestones, exchange direct encouragement with athlete direct messaging, and join challenges.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Custom Training Programs</h3>
+          <p>Follow structured plans crafted for 5K races, marathons, HIIT, and endurance building tailored to your baseline fitness level.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Instant Sync & Cloud Auth</h3>
+          <p>Powered by ultra-fast Supabase infrastructure. Your activities and workout logs are instantly saved and safely accessible anywhere.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Uncompromised Privacy</h3>
+          <p>Your location data belongs to you. Choose what routes to publish publicly and what stays completely private.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Showcase Section -->
+  <section class="section" id="showcase">
+    <div class="container">
+      <div class="showcase-grid">
+        <div class="showcase-text">
+          <div class="highlight-badge">Seamless Flow</div>
+          <h3>Designed with Polish, Built for Pure Speed</h3>
+          <p>Thrive combines a frictionless user interface with dark glass aesthetics so you can start a run in two taps without complicated setups.</p>
+          <ul class="showcase-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Instant live GPS tracking with automatic pause detection
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Social feed with likes, nested comments, and private direct chat
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Personal records, streaks, and milestone badge achievements
+            </li>
+          </ul>
+        </div>
+        <div class="showcase-card">
+          <div style="text-align: center; padding: 20px 0;">
+            <div style="font-size: 3.5rem; margin-bottom: 12px;">🏃💨</div>
+            <h4 style="font-size: 1.3rem; margin-bottom: 6px;">Live Activity Mode</h4>
+            <p style="font-size: 0.9rem; color: var(--text-sub); max-width: 320px; margin: 0 auto 20px;">Continuous foreground service keeps your pace, distance, and calories live on your lock screen.</p>
+            <div style="display: inline-flex; gap: 8px; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; color: #10b981; font-weight: 600;">
+              Active in iOS & Android
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="highlight-badge">Common Inquiries</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about getting started with Thrive.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does Thrive track my workouts in the background?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Thrive uses high-accuracy native GPS location providers with dedicated foreground notification services. When you start an activity and lock your screen or switch apps, tracking continues reliably without losing GPS signal.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is my personal location data secure?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Your privacy is paramount. Your route data is encrypted in transit and at rest using enterprise-grade Supabase database security. You decide whether an activity is shared with friends or stored as private.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is Thrive available on both iOS and Android?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Thrive is natively packaged and optimized for both iOS (iPhone) and Android smartphones.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How can I delete my account or stored data?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You have full control. You can delete your account directly from the Profile Settings tab in the mobile app or submit a deletion request via our <a href="support.html" style="color: #10b981;">Support Portal</a> at any time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Download Thrive today and join athletes around the globe pushing their boundaries every day.</p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="#download" class="btn btn-primary">Download Thrive Now</a>
+        <a href="support.html" class="btn btn-secondary">Contact Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 14px; display: inline-flex;">
+            <div class="logo-icon">🌿</div>
+            <span>Thrive</span>
+          </a>
+          <p style="font-size: 0.9rem; max-width: 280px;">Elevate your wellness with precision GPS activity tracking, intelligent metrics, and an active fitness community.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#showcase">Experience</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#download">Download App</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Support</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="support.html">Support Center</a></li>
+            <li><a href="support.html#account-deletion">Delete Account</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 10px;">For inquiries, support, or privacy questions:</p>
+          <a href="mailto:support@thrivewellness.app" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">support@thrivewellness.app</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Thrive Wellness. All rights reserved.</span>
+        <span>Crafted for athletes and fitness enthusiasts.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
