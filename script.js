@@ -192,4 +192,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     observer.observe(metricsSection);
   }
+
+  // 6. Interactive Billing Frequency Switcher (Monthly / Annual -50%)
+  const billingButtons = document.querySelectorAll('.billing-toggle-btn');
+  const pricingCards = document.querySelectorAll('.pricing-card');
+
+  if (billingButtons.length > 0) {
+    billingButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const billingType = btn.getAttribute('data-billing'); // 'monthly' or 'annual'
+        if (btn.classList.contains('active')) return;
+
+        // Toggle active button class
+        billingButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update pricing cards
+        pricingCards.forEach(card => {
+          const priceVal = card.querySelector('.price-val');
+          const pricePeriod = card.querySelector('.price-period');
+          const priceSubnote = card.querySelector('.price-subnote');
+          const priceWrap = card.querySelector('.pricing-price');
+
+          if (priceVal && pricePeriod && priceSubnote && priceWrap) {
+            // Animate transition
+            priceWrap.style.opacity = '0.3';
+            priceWrap.style.transform = 'translateY(-4px)';
+            priceSubnote.style.opacity = '0.3';
+
+            setTimeout(() => {
+              priceVal.textContent = priceVal.getAttribute(`data-${billingType}`);
+              pricePeriod.textContent = pricePeriod.getAttribute(`data-${billingType}`);
+              priceSubnote.textContent = priceSubnote.getAttribute(`data-${billingType}`);
+
+              priceWrap.style.opacity = '1';
+              priceWrap.style.transform = 'translateY(0)';
+              priceSubnote.style.opacity = '1';
+            }, 150);
+          }
+        });
+      });
+    });
+  }
 });

@@ -449,71 +449,120 @@
           <span>Flexible Membership</span>
         </div>
         <h2>Invest in Your Well-Being</h2>
-        <p>Start 100% free with core 8-pillar tracking, or unlock unlimited AI Haven Coaching and advanced trend analysis.</p>
+        <p>Start 100% free with core daily tracking, or unlock unlimited Haven AI Coaching and advanced trend analysis.</p>
+
+        <!-- Interactive Billing Switcher -->
+        <div class="pricing-toggle-wrap">
+          <div class="pricing-toggle" role="group" aria-label="Billing frequency toggle">
+            <button type="button" class="billing-toggle-btn" data-billing="monthly">
+              Monthly
+            </button>
+            <button type="button" class="billing-toggle-btn active" data-billing="annual">
+              Annual <span class="discount-pill">-50%</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div class="pricing-grid">
         <!-- Free Tier -->
-        <div class="pricing-card">
+        <div class="pricing-card" data-tier="free">
           <div>
-            <div class="pricing-tier-name">Free</div>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">Essential daily tracking</p>
-            <div class="pricing-price">$0 <span>/ forever</span></div>
+            <div class="pricing-tier-header">
+              <div class="pricing-tier-name">Thrive Free</div>
+            </div>
+            <p class="pricing-tier-desc">Basic tracking & shared AI pool</p>
+            <div class="pricing-price-box">
+              <div class="pricing-price">
+                <span class="price-currency">$</span><span class="price-val" data-monthly="0" data-annual="0">0</span>
+                <span class="price-period" data-monthly="/ month" data-annual="/ yr">/ yr</span>
+              </div>
+              <div class="price-subnote" data-monthly="Free forever" data-annual="Free forever">Free forever</div>
+            </div>
             <ul class="pricing-features">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 8 Health Pillars Tracking</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Daily Health Score Calculation</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 5 Core Wellness Pillars tracking</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 5 AI messages/day shared pool</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 2 Guided Programs (Sleep & Hydration)</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Read-Only Community access</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Apple Health & Fit Sync</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Community Access</li>
             </ul>
           </div>
           <a href="#download" class="btn btn-secondary" style="width: 100%;">Get Started Free</a>
         </div>
 
         <!-- Starter Tier -->
-        <div class="pricing-card">
+        <div class="pricing-card" data-tier="starter">
+          <div class="plan-top-badge starter-badge">⚡ Starter</div>
           <div>
-            <div class="pricing-tier-name">Starter</div>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">For habit builders</p>
-            <div class="pricing-price">$4.99 <span>/ month</span></div>
+            <div class="pricing-tier-header">
+              <div class="pricing-tier-name">Thrive Starter</div>
+            </div>
+            <p class="pricing-tier-desc">Full 8 pillars & higher AI limits</p>
+            <div class="pricing-price-box">
+              <div class="pricing-price">
+                <span class="price-currency">$</span><span class="price-val" data-monthly="4.99" data-annual="29.99">29.99</span>
+                <span class="price-period" data-monthly="/ month" data-annual="/ yr">/ yr</span>
+              </div>
+              <div class="price-subnote" data-monthly="Billed monthly" data-annual="$2.50/mo billed annually (Save 50%)">$2.50/mo billed annually (Save 50%)</div>
+            </div>
             <ul class="pricing-features">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Everything in Free</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 10 Daily Haven AI Chats</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Full 8 Wellness Pillars tracking</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 25 AI messages/day per section</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 5 Guided Wellness Programs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Active Community (Post & Comment)</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 14-Day Biometric Trends</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1 Active 21-Day Program</li>
             </ul>
           </div>
           <a href="#download" class="btn btn-secondary" style="width: 100%;">Start Starter</a>
         </div>
 
         <!-- Premium Tier (Featured) -->
-        <div class="pricing-card featured">
+        <div class="pricing-card featured" data-tier="premium">
           <div class="popular-badge">Most Popular</div>
           <div>
-            <div class="pricing-tier-name" style="color: var(--primary);">Premium</div>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">Holistic health mastery</p>
-            <div class="pricing-price">$9.99 <span>/ month</span></div>
+            <div class="pricing-tier-header">
+              <div class="pricing-tier-name" style="color: var(--primary);">Thrive Premium</div>
+            </div>
+            <p class="pricing-tier-desc">Unlimited AI coaching & Wearables</p>
+            <div class="pricing-price-box">
+              <div class="pricing-price">
+                <span class="price-currency">$</span><span class="price-val" data-monthly="9.99" data-annual="59.99">59.99</span>
+                <span class="price-period" data-monthly="/ month" data-annual="/ yr">/ yr</span>
+              </div>
+              <div class="price-subnote" data-monthly="Billed monthly" data-annual="$5.00/mo billed annually (Save 50%)">$5.00/mo billed annually (Save 50%)</div>
+            </div>
             <ul class="pricing-features">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlimited Haven AI Coach</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> All 3 Coach Personas</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> All 21-Day Programs</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Deep Cross-Pillar Analytics</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Luna AI Cycle Correlation</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlimited AI coaching 24/7 (3 Personas)</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Wearable Device Sync (Apple & Garmin)</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> All 5 Map Styles & Heatmaps</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> GPX Route Export & Watermark removal</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Deep Cross-Pillar & Luna AI Analytics</li>
             </ul>
           </div>
           <a href="#download" class="btn btn-primary" style="width: 100%;">Try Premium Free</a>
         </div>
 
         <!-- Elite Tier -->
-        <div class="pricing-card">
+        <div class="pricing-card" data-tier="elite">
+          <div class="plan-top-badge elite-badge">👑 Elite 👑</div>
           <div>
-            <div class="pricing-tier-name" style="color: var(--accent-amber);">Elite</div>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">Maximum performance</p>
-            <div class="pricing-price">$19.99 <span>/ month</span></div>
+            <div class="pricing-tier-header">
+              <div class="pricing-tier-name" style="color: var(--accent-amber);">Thrive Elite</div>
+            </div>
+            <p class="pricing-tier-desc">3D terrain, priority AI & family slots</p>
+            <div class="pricing-price-box">
+              <div class="pricing-price">
+                <span class="price-currency">$</span><span class="price-val" data-monthly="19.99" data-annual="119.99">119.99</span>
+                <span class="price-period" data-monthly="/ month" data-annual="/ yr">/ yr</span>
+              </div>
+              <div class="price-subnote" data-monthly="Billed monthly" data-annual="$10.00/mo billed annually (Save 50%)">$10.00/mo billed annually (Save 50%)</div>
+            </div>
             <ul class="pricing-features">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Everything in Premium</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Priority Protocol Generation</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Advanced Biomarker Correlation</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> VIP Direct Support</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Priority AI Agent with long-term memory</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 3D Terrain & Winter Topo Maps</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> All 8 Guided Programs unlocked</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Family Sharing (up to 3 slots)</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> VIP Direct Support & Fast Track</li>
             </ul>
           </div>
           <a href="#download" class="btn btn-secondary" style="width: 100%;">Unlock Elite</a>
@@ -584,11 +633,11 @@
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>What is the difference between the Free tier, Premium, and Elite?</span>
+            <span>What is the difference between the Free tier, Starter, Premium, and Elite?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Our core tracking and 8-pillar logs are 100% free forever. Premium unlocks unlimited interactions with the personalized Haven AI Coach, deep multi-week trends analysis, and full access to our structured 21-day wellness programs. Elite adds priority protocol generation and advanced biomarker correlations.</p>
+            <p>Our core 5-pillar tracking is 100% free forever. <strong>Starter</strong> ($4.99/mo or $29.99/yr) unlocks full 8-pillar tracking, 25 daily AI chats per section, and 5 guided programs. <strong>Premium</strong> ($9.99/mo or $59.99/yr) provides unlimited 24/7 Haven AI coaching across all 3 coach personas, wearable device sync (Apple Health & Garmin), all 5 map styles, and deep trend analytics. <strong>Elite</strong> ($19.99/mo or $119.99/yr) includes a priority AI agent with long-term memory, 3D terrain maps, all 8 guided programs, and family sharing for up to 3 slots. Choosing annual billing saves you 50% across all paid plans.</p>
           </div>
         </div>
       </div>
