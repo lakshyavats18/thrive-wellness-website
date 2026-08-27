@@ -712,6 +712,7 @@ p { color: var(--text-muted); font-size: 1.05rem; }
 .section {
   padding: 90px 0;
   position: relative;
+  scroll-margin-top: 90px;
 }
 
 .section-header {
@@ -984,33 +985,35 @@ p { color: var(--text-muted); font-size: 1.05rem; }
 .pricing-toggle-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 28px;
+  margin: 32px 0 10px;
 }
 
 .pricing-toggle {
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-color);
+  background: rgba(20, 14, 28, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-full);
-  padding: 4px;
-  backdrop-filter: blur(12px);
+  padding: 5px 6px;
+  backdrop-filter: blur(16px);
   position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .billing-toggle-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 20px;
+  padding: 9px 24px;
   border-radius: var(--radius-full);
   border: none;
   background: transparent;
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.01em;
 }
 
 .billing-toggle-btn:hover {
@@ -1018,24 +1021,28 @@ p { color: var(--text-muted); font-size: 1.05rem; }
 }
 
 .billing-toggle-btn.active {
-  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  background: linear-gradient(135deg, #ff5e62 0%, #ff6b6b 100%);
   color: #fff;
-  box-shadow: 0 4px 15px var(--primary-glow);
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(255, 94, 98, 0.45);
 }
 
 .discount-pill {
   display: inline-block;
-  background: #ff4757;
-  color: #fff;
+  background: rgba(245, 158, 11, 0.22);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.4);
   font-size: 0.72rem;
   font-weight: 800;
   padding: 2px 7px;
   border-radius: 999px;
   letter-spacing: 0.02em;
+  transition: all 0.2s ease;
 }
 
 .billing-toggle-btn.active .discount-pill {
   background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
   color: #fff;
 }
 
@@ -1195,6 +1202,21 @@ p { color: var(--text-muted); font-size: 1.05rem; }
 
 .pricing-features li svg {
   color: var(--primary);
+  flex-shrink: 0;
+}
+
+.pricing-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.pricing-guarantee svg {
   flex-shrink: 0;
 }
 
