@@ -113,14 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (personaButtons.length > 0 && coachAvatar && coachName && coachTag && chatStream) {
     personaButtons.forEach(btn => {
+      btn.setAttribute('role', 'tab');
+      btn.setAttribute('aria-selected', btn.classList.contains('active') ? 'true' : 'false');
+
       btn.addEventListener('click', () => {
         const personaKey = btn.getAttribute('data-persona');
         const data = PERSONA_DATA[personaKey];
         if (!data) return;
 
         // Toggle active button
-        personaButtons.forEach(b => b.classList.remove('active'));
+        personaButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
 
         // Animate swap
         coachAvatar.innerText = data.avatar;
@@ -140,11 +147,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. FAQ Accordion Toggle
+  // 3. FAQ Accordion Toggle & ARIA Support
   const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
+  faqItems.forEach((item, index) => {
     const questionBtn = item.querySelector('.faq-question');
-    if (questionBtn) {
+    const answerDiv = item.querySelector('.faq-answer');
+
+    if (questionBtn && answerDiv) {
+      const answerId = answerDiv.id || `faq-ans-${index + 1}`;
+      answerDiv.id = answerId;
+      answerDiv.setAttribute('role', 'region');
+      questionBtn.setAttribute('aria-controls', answerId);
+      questionBtn.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
+
       questionBtn.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         
@@ -152,14 +167,18 @@ document.addEventListener('DOMContentLoaded', () => {
         faqItems.forEach(otherItem => {
           if (otherItem !== item) {
             otherItem.classList.remove('active');
+            const otherBtn = otherItem.querySelector('.faq-question');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
           }
         });
 
         // Toggle current item
         if (!isActive) {
           item.classList.add('active');
+          questionBtn.setAttribute('aria-expanded', 'true');
         } else {
           item.classList.remove('active');
+          questionBtn.setAttribute('aria-expanded', 'false');
         }
       });
     }
@@ -250,13 +269,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (billingButtons.length > 0) {
     billingButtons.forEach(btn => {
+      btn.setAttribute('role', 'radio');
+      btn.setAttribute('aria-checked', btn.classList.contains('active') ? 'true' : 'false');
+
       btn.addEventListener('click', () => {
         const billingType = btn.getAttribute('data-billing'); // 'monthly' or 'annual'
         if (btn.classList.contains('active')) return;
 
         // Toggle active button class
-        billingButtons.forEach(b => b.classList.remove('active'));
+        billingButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-checked', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-checked', 'true');
 
         // Update pricing cards
         pricingCards.forEach(card => {
@@ -339,4 +365,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 8. Interactive Scroll-to-Top Button
+  let scrollTopBtn = document.querySelector('.scroll-top-btn');
+  if (!scrollTopBtn) {
+    scrollTopBtn = document.createElement('button');
+    scrollTopBtn.className = 'scroll-top-btn';
+    scrollTopBtn.setAttribute('aria-label', 'Scroll back to top');
+    scrollTopBtn.innerHTML = `
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    `;
+    document.body.appendChild(scrollTopBtn);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 450) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });

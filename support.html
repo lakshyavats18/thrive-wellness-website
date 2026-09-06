@@ -31,8 +31,47 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I connect Apple Health or Google Fit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Go to Profile -> Settings -> Integrations and toggle Apple Health or Google Fit. Grant read permissions for Steps, Heart Rate, and Sleep analysis for automated biometric synchronization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I switch Haven AI coaching personas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open the Coach tab in the app, tap the top persona chip, and choose between Science Nerd (biometric optimization), Zen Master (mindful regulation), or Hype Coach (energy and drive)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I restore my membership on a new phone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Log in with your registered account credentials on your new device. Your subscription tier, streak records, and full health score history will sync automatically from Supabase cloud infrastructure."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <noscript>
+    <div style="background: #ff6b6b; color: #fff; padding: 12px 20px; text-align: center; font-weight: 600; font-size: 0.9rem;">
+      JavaScript is currently disabled in your browser. Some interactive features require JavaScript to be enabled.
+    </div>
+  </noscript>
   <div class="ambient-glow"></div>
 
   <!-- Navigation -->

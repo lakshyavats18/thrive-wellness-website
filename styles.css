@@ -2066,3 +2066,113 @@ body.menu-open {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Scroll-to-Top Button
+   ========================================================================== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(26, 20, 36, 0.88);
+  border: 1px solid var(--border-glow);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 950;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(255, 107, 107, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.25s ease,
+              background 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background: var(--primary);
+  color: #faf0e6;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.45);
+  border-color: #ff5252;
+}
+
+/* ==========================================================================
+   404 Error Page
+   ========================================================================== */
+.error-page {
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 24px 80px;
+  position: relative;
+}
+
+.error-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.error-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(5.5rem, 14vw, 9rem);
+  font-weight: 900;
+  line-height: 0.95;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.5) 0%, rgba(245, 158, 11, 0.25) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+  letter-spacing: -0.05em;
+  user-select: none;
+}
+
+.error-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 36px;
+}
+
+@media (max-width: 600px) {
+  .error-links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.error-link-card {
+  padding: 16px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: var(--transition);
+  display: block;
+}
+
+.error-link-card:hover {
+  background: rgba(255, 107, 107, 0.12);
+  border-color: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+

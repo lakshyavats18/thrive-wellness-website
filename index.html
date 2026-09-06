@@ -36,8 +36,123 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://thrivewellness.io/#organization",
+        "name": "Thrive Wellness",
+        "url": "https://thrivewellness.io/",
+        "logo": "https://thrivewellness.io/logo.png",
+        "email": "support@thrivewellness.io",
+        "description": "AI-powered holistic wellness platform tracking 8 pillars, real-time recovery scores, and personalized Haven AI coaching."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://thrivewellness.io/#app",
+        "name": "Thrive Wellness",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "iOS, Android, Web",
+        "url": "https://thrivewellness.io/",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Free Tier",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "5 Core Wellness Pillars tracking, shared AI messages pool"
+          },
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "price": "4.99",
+            "priceCurrency": "USD",
+            "description": "Full 8 health pillars, 25 daily AI messages/day"
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium",
+            "price": "9.99",
+            "priceCurrency": "USD",
+            "description": "Unlimited 24/7 Haven AI coaching, wearable sync, advanced analytics"
+          },
+          {
+            "@type": "Offer",
+            "name": "Elite",
+            "price": "19.99",
+            "priceCurrency": "USD",
+            "description": "Priority AI agent, 3D terrain maps, family sharing up to 3 slots"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://thrivewellness.io/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does Thrive calculate my Daily Wellness Score?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Thrive's proprietary bio-synthesis engine aggregates signals across all 8 health pillars—sleep efficiency, resting heart rate, HRV stress response, active strain, and hydration. Each pillar is weighted dynamically based on your baseline habits to generate a single intuitive 0-100 score each morning with zero guesswork."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What wearable devices and smartwatches are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Thrive syncs bi-directionally with Apple Health (Apple Watch, Oura, Whoop, Eight Sleep) and Google Fit / Health Connect (Wear OS, Pixel Watch, Garmin, Fitbit, Withings). Background sync runs quietly without draining your device battery."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is Haven AI Coach and is it clinically sound?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Haven is our conversational wellness intelligence powered by state-of-the-art LLMs fine-tuned on peer-reviewed sports physiology, circadian rhythm science, and cognitive-behavioral wellness protocols. Haven doesn't replace medical diagnosis, but translates raw biomarker spikes into actionable daytime advice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I cancel my subscription easily?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Cancel with 1 tap at any time in your mobile App Store / Google Play account settings, or manage via our web portal. You will retain full access until your billing cycle ends, backed by our 14-day money-back guarantee."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my biometric telemetry secure and private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Your health metrics are encrypted in transit and at rest using enterprise Supabase infrastructure. We will never sell, broker, or monetize your personal health data with advertisers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between the Free tier, Starter, Premium, and Elite?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our core 5-pillar tracking is 100% free forever. Starter ($4.99/mo) unlocks full 8-pillar tracking. Premium ($9.99/mo) provides unlimited 24/7 Haven AI coaching across 3 personas, wearable device sync, and deep trend analytics. Elite ($19.99/mo) includes a priority AI agent, 3D terrain maps, and family sharing for up to 3 slots."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <noscript>
+    <div style="background: #ff6b6b; color: #fff; padding: 12px 20px; text-align: center; font-weight: 600; font-size: 0.9rem;">
+      JavaScript is currently disabled in your browser. Some interactive features like coach persona switching, FAQ accordions, and pricing calculators require JavaScript to be enabled.
+    </div>
+  </noscript>
   <div class="ambient-glow"></div>
 
   <!-- Navigation -->
