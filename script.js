@@ -391,4 +391,52 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // 9. Unified 1-Click Copy-to-Clipboard Buttons
+  const copyButtons = document.querySelectorAll('.copy-email-btn, #copy-email-btn, [data-copy-target]');
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const targetSelector = btn.getAttribute('data-copy-target');
+      let textToCopy = 'support@thrivewellness.io';
+
+      if (targetSelector) {
+        const targetEl = document.querySelector(targetSelector);
+        if (targetEl) textToCopy = targetEl.textContent.trim();
+      } else {
+        const siblingText = btn.parentElement ? btn.parentElement.querySelector('.email-copy-text') : null;
+        if (siblingText) textToCopy = siblingText.textContent.trim();
+      }
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(textToCopy);
+        } else {
+          const tempInput = document.createElement('textarea');
+          tempInput.value = textToCopy;
+          tempInput.style.position = 'fixed';
+          tempInput.style.opacity = '0';
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand('copy');
+          document.body.removeChild(tempInput);
+        }
+
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = '✅ Copied!';
+        btn.classList.add('copied');
+        btn.style.borderColor = 'var(--primary)';
+        btn.style.color = 'var(--primary)';
+
+        setTimeout(() => {
+          btn.innerHTML = originalHtml;
+          btn.classList.remove('copied');
+          btn.style.borderColor = '';
+          btn.style.color = '';
+        }, 2200);
+      } catch (err) {
+        console.warn('Could not copy to clipboard:', err);
+      }
+    });
+  });
 });
+
