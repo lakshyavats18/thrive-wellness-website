@@ -3,29 +3,80 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mobile Menu Toggle
+  // 1. Mobile Menu Toggle & Overlay
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
+  // Create or retrieve overlay element
+  let navOverlay = document.querySelector('.nav-overlay');
+  if (!navOverlay) {
+    navOverlay = document.createElement('div');
+    navOverlay.className = 'nav-overlay';
+    document.body.appendChild(navOverlay);
+  }
+
+  const closeMobileMenu = () => {
+    if (navLinks) navLinks.classList.remove('open');
+    if (navOverlay) navOverlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+    if (menuToggle) {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.innerHTML = '☰';
+    }
+  };
+
+  const openMobileMenu = () => {
+    if (navLinks) navLinks.classList.add('open');
+    if (navOverlay) navOverlay.classList.add('active');
+    document.body.classList.add('menu-open');
+    if (menuToggle) {
+      menuToggle.setAttribute('aria-expanded', 'true');
+      menuToggle.innerHTML = '✕';
+    }
+  };
+
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = navLinks.classList.contains('open');
-      menuToggle.setAttribute('aria-expanded', isOpen);
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+
+    // Close menu when tapping overlay
+    navOverlay.addEventListener('click', () => {
+      closeMobileMenu();
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-        navLinks.classList.remove('open');
+        closeMobileMenu();
       }
     });
 
     // Close menu on link click
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
+        closeMobileMenu();
       });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeMobileMenu();
+      }
+    });
+
+    // Reset when resizing above 768px
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+        closeMobileMenu();
+      }
     });
   }
 
@@ -232,6 +283,60 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       });
+    });
+  }
+
+  // 7. Early Access & App Status Modal
+  const earlyAccessModal = document.getElementById('early-access-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const earlyAccessTriggers = document.querySelectorAll('.open-early-access');
+
+  const openModal = () => {
+    if (earlyAccessModal) {
+      earlyAccessModal.classList.add('open');
+      earlyAccessModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('menu-open');
+    }
+  };
+
+  const closeModal = () => {
+    if (earlyAccessModal) {
+      earlyAccessModal.classList.remove('open');
+      earlyAccessModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('menu-open');
+    }
+  };
+
+  if (earlyAccessModal) {
+    if (earlyAccessTriggers.length > 0) {
+      earlyAccessTriggers.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (typeof closeMobileMenu === 'function') closeMobileMenu();
+          openModal();
+        });
+      });
+    }
+
+    if (modalCloseBtn) {
+      modalCloseBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeModal();
+      });
+    }
+
+    // Close when tapping outside modal dialog card
+    earlyAccessModal.addEventListener('click', (e) => {
+      if (e.target === earlyAccessModal) {
+        closeModal();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && earlyAccessModal.classList.contains('open')) {
+        closeModal();
+      }
     });
   }
 });

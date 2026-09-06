@@ -38,10 +38,13 @@
         <li><a href="#pricing">Plans</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="support.html">Support</a></li>
+        <li class="mobile-only-nav-item">
+          <a href="https://app.thrivewellness.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Launch Web App &rarr;</a>
+        </li>
       </ul>
 
       <div class="nav-actions">
-        <a href="#download" class="btn btn-primary btn-sm">Get App</a>
+        <a href="#early-access-modal" class="btn btn-primary btn-sm open-early-access">Get App</a>
         <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
       </div>
     </div>
@@ -66,18 +69,19 @@
 
           <div class="store-badges" id="download">
             <!-- App Store Badge -->
-            <a href="#" class="badge-btn">
+            <a href="#early-access-modal" class="badge-btn open-early-access" data-platform="ios" aria-label="Apple App Store download status">
               <svg viewBox="0 0 384 512">
                 <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-13.8 69.5-34.3z"/>
               </svg>
               <div class="badge-text">
                 <span>Download on the</span>
-                <strong>Apple Store</strong>
+                <strong>App Store</strong>
               </div>
+              <span class="badge-status-pill">Soon</span>
             </a>
 
             <!-- Google Play Badge -->
-            <a href="#" class="badge-btn">
+            <a href="#early-access-modal" class="badge-btn open-early-access" data-platform="android" aria-label="Google Play Store closed beta status">
               <svg viewBox="0 0 512 512">
                 <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 24 20.6 24 37.5v437c0 16.9 10 30.7 23 37.5L273.9 256 47 0zm394.5 228.6l-48.4-27.8-62.7 62.7 62.7 62.7 48.8-28.1c16.1-9.3 26.1-26.2 26.1-44.7s-9.9-35.5-26.5-44.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
               </svg>
@@ -85,6 +89,21 @@
                 <span>GET IT ON</span>
                 <strong>Google Play</strong>
               </div>
+              <span class="badge-status-pill beta">Closed Beta</span>
+            </a>
+
+            <!-- Direct Web App Badge -->
+            <a href="https://app.thrivewellness.io" target="_blank" rel="noopener noreferrer" class="badge-btn badge-btn-highlight" aria-label="Launch Thrive Web App">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <div class="badge-text">
+                <span>Instant Access</span>
+                <strong>Web App &rarr;</strong>
+              </div>
+              <span class="badge-status-pill live">Live</span>
             </a>
           </div>
 
@@ -659,7 +678,7 @@
       <h2>Start Your Health Transformation</h2>
       <p>Download Thrive today and join thousands of members understanding their bodies and optimizing their wellness with AI.</p>
       <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <a href="#download" class="btn btn-primary">Download Thrive App</a>
+        <a href="#early-access-modal" class="btn btn-primary open-early-access">Get Thrive App</a>
         <a href="support.html" class="btn btn-secondary">Contact Support</a>
       </div>
     </div>
@@ -713,6 +732,67 @@
       </div>
     </div>
   </footer>
+
+  <!-- Early Access & App Status Modal -->
+  <div class="modal-backdrop" id="early-access-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-badge">
+          <span class="dot"></span>
+          <span>App Release Status</span>
+        </div>
+        <h3 id="modal-title">Get Access to Thrive</h3>
+        <p>Our native mobile apps are currently progressing through testing and store submission. You can start thriving immediately on our Web App or join the mobile beta!</p>
+      </div>
+
+      <div class="modal-options-list">
+        <!-- Option 1: Live Web App -->
+        <div class="modal-option-card highlight">
+          <div class="modal-option-top">
+            <div class="modal-option-info">
+              <div class="modal-option-tag live">⚡ Instant Access &bull; Live Now</div>
+              <h4>Thrive Web App</h4>
+              <p>Full-featured access to 8 pillars, Haven AI Coach, and wellness analytics in any mobile or desktop browser.</p>
+              <div class="modal-option-subnote">No download required &bull; app.thrivewellness.io</div>
+            </div>
+            <a href="https://app.thrivewellness.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="white-space: nowrap;">
+              Launch App &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 2: Android Closed Testing -->
+        <div class="modal-option-card">
+          <div class="modal-option-top">
+            <div class="modal-option-info">
+              <div class="modal-option-tag testing">🤖 Google Play &bull; Closed Testing</div>
+              <h4>Android Beta Access</h4>
+              <p>Google Play closed test track is live for registered testers. Request your access invite to install the native app.</p>
+            </div>
+            <a href="mailto:support@thrivewellness.io?subject=Android%20Closed%20Testing%20Invite&body=Hi%20Thrive%20Team,%0D%0A%0D%0APlease%20invite%20my%20Google%20Play%20account%20to%20the%20closed%20test%20track.%0D%0A%0D%0AMy%20Google%20Play%20Email:%20" class="btn btn-secondary btn-sm" style="white-space: nowrap;">
+              Request Invite
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 3: iOS App Store -->
+        <div class="modal-option-card">
+          <div class="modal-option-top">
+            <div class="modal-option-info">
+              <div class="modal-option-tag coming-soon">🍎 iOS &bull; Submitting Soon</div>
+              <h4>Apple App Store</h4>
+              <p>Our iOS build is finalizing review for the App Store. Join the waitlist to be alerted first when public download opens.</p>
+            </div>
+            <a href="mailto:support@thrivewellness.io?subject=iOS%20App%20Launch%20Notification&body=Hi%20Thrive%20Team,%0D%0A%0D%0APlease%20notify%20me%20when%20Thrive%20is%20available%20on%20the%20Apple%20App%20Store.%0D%0A%0D%0AMy%20Email:%20" class="btn btn-secondary btn-sm" style="white-space: nowrap;">
+              Notify Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
