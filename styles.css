@@ -1673,6 +1673,44 @@ body.menu-open {
   margin-bottom: 0;
 }
 
+.highlight-box {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.highlight-box p {
+  color: var(--text-main);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.highlight-box strong {
+  color: #fff;
+}
+
+.highlight-box a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.highlight-box a:hover {
+  color: var(--primary-hover);
+}
+
+.legal-section a {
+  color: var(--primary);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.legal-section a:hover {
+  color: var(--primary-hover);
+}
+
 /* Support Form Card */
 .support-card {
   background: var(--bg-card);
